@@ -107,7 +107,7 @@ defaultAttachment = Attachment
         }
 
 instance ToJSON AttachmentColor where
-    toEncoding x = toEncoding $ case x of
+    toJSON x = toJSON $ case x of
         DefaultColor  -> Nothing
         GoodColor     -> Just "good"
         WarningColor  -> Just "warning"
